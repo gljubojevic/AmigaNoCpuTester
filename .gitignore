@@ -1,0 +1,7 @@
+.DS_Store
+*.uaem
+build
+uae/dh0/NoCpuTester
+uae/dh0/chip.dat
+uae/dh0/chip.zx0
+

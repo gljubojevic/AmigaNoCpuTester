@@ -1,0 +1,148 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "amiga-assembly",
+			"request": "launch",
+			"name": "FS-UAE A500+ Launch",
+			"noDebug": true,
+			"program": "${workspaceFolder}/uae/dh0/NoCpuTester",
+			"remoteProgram": "SYS:NoCpuTester",
+			"emulatorType": "fs-uae",
+			"emulatorArgs": [
+				"--hard_drive_0=${workspaceFolder}/uae/dh0",
+				"--automatic_input_grab=0",
+				"--amiga_model=A500+",
+				"--chip_memory=512",
+				"--slow_memory=512",
+				"--joystick_port_1=none",
+				"--video_sync=off"
+			],
+			"preLaunchTask": "amigaassembly: build"
+		},
+		{
+			"type": "amiga-assembly",
+			"request": "launch",
+			"name": "FS-UAE A500+ Debug",
+			"stopOnEntry": false,
+			"program": "${workspaceFolder}/uae/dh0/NoCpuTester",
+			"remoteProgram": "SYS:NoCpuTester",
+			"emulatorType": "fs-uae",
+			"emulatorArgs": [
+				"--hard_drive_0=${workspaceFolder}/uae/dh0",
+				"--automatic_input_grab=0",
+				"--amiga_model=A500+",
+				"--chip_memory=512",
+				"--slow_memory=512",
+				"--joystick_port_1=none",
+				"--video_sync=off"
+			],
+			"preLaunchTask": "amigaassembly: build"
+		},
+		{
+			"type": "amiga-assembly",
+			"request": "launch",
+			"name": "FS-UAE A1200 Launch",
+			"noDebug": true,
+			"program": "${workspaceFolder}/uae/dh0/NoCpuTester",
+			"remoteProgram": "SYS:NoCpuTester",
+			"emulatorType": "fs-uae",
+			"emulatorArgs": [
+				"--hard_drive_0=${workspaceFolder}/uae/dh0",
+				"--automatic_input_grab=0",
+				"--amiga_model=A1200",
+				"--chip_memory=2048",
+				"--fast_memory=2048",
+				"--joystick_port_1=none",
+				"--video_sync=off"
+			],
+			"preLaunchTask": "amigaassembly: build"
+		},
+		{
+			"type": "amiga-assembly",
+			"request": "launch",
+			"name": "FS-UAE A1200 Debug",
+			"stopOnEntry": false,
+			"program": "${workspaceFolder}/uae/dh0/NoCpuTester",
+			"remoteProgram": "SYS:NoCpuTester",
+			"emulatorType": "fs-uae",
+			"emulatorArgs": [
+				"--hard_drive_0=${workspaceFolder}/uae/dh0",
+				"--automatic_input_grab=0",
+				"--amiga_model=A1200",
+				"--chip_memory=2048",
+				"--fast_memory=2048",
+				"--joystick_port_1=none",
+				"--video_sync=off"
+			],
+			"preLaunchTask": "amigaassembly: build"
+		},
+		{
+			"type": "amiga-assembly",
+			"request": "launch",
+			"name": "WinUAE A500+ Launch",
+			"noDebug": true,
+			"program": "${workspaceFolder}/uae/dh0/NoCpuTester",
+			"remoteProgram": "SYS:NoCpuTester",
+			"emulatorType": "winuae",
+			"emulatorArgs": [
+				"-s",
+				"filesystem=rw,dh0:${workspaceFolder}/uae/dh0",
+				"-s",
+				"quickstart=a500+,1",
+			],
+			"preLaunchTask": "amigaassembly: build"
+		},
+		{
+			"type": "amiga-assembly",
+			"request": "launch",
+			"name": "WinUAE A500+ Debug",
+			"stopOnEntry": false,
+			"program": "${workspaceFolder}/uae/dh0/NoCpuTester",
+			"remoteProgram": "SYS:NoCpuTester",
+			"emulatorType": "winuae",
+			"emulatorArgs": [
+				"-s",
+				"filesystem=rw,dh0:${workspaceFolder}/uae/dh0",
+				"-s",
+				"quickstart=a500+,1",
+			],
+			"preLaunchTask": "amigaassembly: build"
+		},
+		{
+			"type": "amiga-assembly",
+			"request": "launch",
+			"name": "WinUAE A1200 Launch",
+			"noDebug": true,
+			"program": "${workspaceFolder}/uae/dh0/NoCpuTester",
+			"remoteProgram": "SYS:NoCpuTester",
+			"emulatorType": "winuae",
+			"emulatorArgs": [
+				"-s",
+				"filesystem=rw,dh0:${workspaceFolder}/uae/dh0",
+				"-s",
+				"quickstart=a1200,1",
+			],
+			"preLaunchTask": "amigaassembly: build"
+		},
+		{
+			"type": "amiga-assembly",
+			"request": "launch",
+			"name": "WinUAE A1200 Debug",
+			"stopOnEntry": false,
+			"program": "${workspaceFolder}/uae/dh0/NoCpuTester",
+			"remoteProgram": "SYS:NoCpuTester",
+			"emulatorType": "winuae",
+			"emulatorArgs": [
+				"-s",
+				"filesystem=rw,dh0:${workspaceFolder}/uae/dh0",
+				"-s",
+				"quickstart=a1200,1",
+			],
+			"preLaunchTask": "amigaassembly: build"
+		}
+	]
+}
