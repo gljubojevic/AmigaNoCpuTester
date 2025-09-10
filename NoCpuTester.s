@@ -1,7 +1,7 @@
 	section	"NoCPUTester",CODE_P
 
 ;Flag to select run file or direct copper
-RUN_FORM_FILE	=	0
+RUN_FORM_FILE	=	1
 
 NoCPUTester:
 	IF	RUN_FORM_FILE=1

@@ -1,6 +1,7 @@
 {
 	"version": "2.0.0",
 	"tasks": [
+		// Executable build
 		{
 			"type": "amigaassembly",
 			"vasm": {
@@ -32,6 +33,45 @@
 			"group": {
 				"kind": "build",
 				"isDefault": true
+			},
+			// Force building copper list first
+			"dependsOn":["amigaassembly: build copper"]
+		},
+		// Copper build, run before executable build
+		{
+			"type": "amigaassembly",
+			"vasm": {
+				"enabled": true,
+				"command": "${config:amiga-assembly.binDir}/vasmm68k_mot",
+				"args": [
+					"-m68000",
+					"-Fhunk",
+					//"-rangewarnings",
+					"-no-typechk"
+				],
+				"leaveWarnings": true
+			},
+			"vlink": {
+				"enabled": true,
+				"command": "${config:amiga-assembly.binDir}/vlink",
+				// source to build chip.dat
+				"includes": "parts/BlankVector.s",
+				"excludes": "",
+				"createStartupSequence": false,
+				"createExeFileParentDir": false,
+				// output name and location of chip.dat
+				"exefilename": "../uae/dh0/chip.dat",
+				"args": [
+					"-Bstatic",
+					"-b",
+					"rawbin1"
+				]
+			},
+			"problemMatcher": [],
+			"label": "amigaassembly: build copper",
+			"group": {
+				"kind": "build",
+				"isDefault": false
 			}
 		}
 	]
